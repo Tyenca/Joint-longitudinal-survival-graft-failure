@@ -9,7 +9,7 @@ A coursework assignment on 838 kidney transplant recipients, evaluating whether 
 ## What I did
 
 - **Missing data imputation**: used MICE (`mice` package), restricted to the 21 repeated biomarker measurements (GFR, serum creatinine, MAP at 7 follow-up visits), generating 10 imputed datasets.
-- **Time-dependent Cox regression** — built a counting-process (start/stop) dataset (`tmerge`) to model graft failure as a function of both fixed baseline covariates and the time-varying biomarker values, pooling results across the 10 imputed datasets with Rubin's rule.
+- **Time-dependent Cox regression**: built a counting-process (start/stop) dataset (`tmerge`) to model graft failure as a function of both fixed baseline covariates and the time-varying biomarker values, pooling results across the 10 imputed datasets with Rubin's rule.
 - **Longitudinal (LME) sub-models**: for each biomarker (GFR, creatinine, MAP), compared three mixed-effects model structures (random intercept, random intercept + slope, random intercept + spline) via AIC to find the best-fitting trajectory shape, then checked residual normality and homoscedasticity.
 - **Joint Cox-LME models**: fit three separate joint models (via the `JM` package, Weibull proportional-hazards submodel), each linking a biomarker's longitudinal trajectory to the hazard of graft failure, and checked model assumptions and convergence.
 - **Model comparison**: compared effect estimates from the time-dependent Cox model against the three joint models, finding consistent direction and significance across all three biomarkers.
@@ -17,7 +17,7 @@ A coursework assignment on 838 kidney transplant recipients, evaluating whether 
 
 ## Key finding
 
-Higher GFR was associated with lower graft-failure risk, while higher creatinine and higher blood pressure (MAP) were associated with higher risk — consistent across both modeling approaches. The joint models additionally captured each biomarker's full trajectory shape and produced dynamic, updating survival predictions for individual patients, which a standard time-dependent Cox model cannot do on its own.
+Higher GFR was associated with lower graft-failure risk, while higher creatinine and higher blood pressure (MAP) were associated with higher risk, consistent across both modeling approaches. The joint models additionally captured each biomarker's full trajectory shape and produced dynamic, updating survival predictions for individual patients, which a standard time-dependent Cox model cannot do on its own.
 
 ## Repo contents
 
