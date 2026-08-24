@@ -1,10 +1,10 @@
-# Joint Longitudinal-Survival Models: Predictive Value of Repeated Measures for Graft and Patient Failure
+# Joint Longitudinal Survival Models: Predictive Value of Repeated Measures for Graft and Patient Failure
 
 > **Note:** This analysis was done in R (RStudio), not Python/Colab, so the scripts should run as-is given the data files, aside from updating the hardcoded file paths to your own machine.
 
 ## What this is
 
-A coursework assignment on 838 kidney transplant recipients, evaluating whether *repeated* post-transplant biomarker measurements (kidney function, creatinine, blood pressure) improve prediction of graft failure beyond a standard baseline-only survival model — comparing a time-dependent Cox model against full joint longitudinal-survival models.
+A coursework assignment on 838 kidney transplant recipients, evaluating whether *repeated* post-transplant biomarker measurements (kidney function, creatinine, blood pressure) improve prediction of graft failure beyond a standard baseline-only survival model, comparing a time-dependent Cox model against full joint longitudinal-survival models.
 
 ## What I did
 
